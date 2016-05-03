@@ -37,7 +37,7 @@ board.on("ready", function()
             {
               socket.on
                 (
-                  'click', function () 
+                  'click1', function () 
                     {
                       console.log('button1 pressed');
                       led.toggle(2);
