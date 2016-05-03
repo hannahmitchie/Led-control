@@ -24,12 +24,8 @@ board = new five.Board();
 
 board.on("ready", function() 
   {
-      led = new five.Led(2),
-      led = new five.Led(5),
-      led = new five.Led(6),
-      led = new five.Led(9),
-      led = new five.Led(10),
-      led = new five.Led(11);
+      led = new five.Led([2, 5, 6, 9, 10, 11]),
+      
 
       io.sockets.on
         (
@@ -37,7 +33,7 @@ board.on("ready", function()
             {
               socket.on
                 (
-                  'click', function () 
+                  'click1', function () 
                     {
                       console.log('button1 pressed');
                       led.toggle(2);
@@ -47,7 +43,7 @@ board.on("ready", function()
               socket.on
                 (
                   
-                  'click', function () 
+                  'click2', function () 
                     {
                       console.log('button2 pressed');
                       led.toggle(5);
@@ -57,7 +53,7 @@ board.on("ready", function()
               socket.on
                 (
                   
-                  'click', function () 
+                  'click3', function () 
                     {
                       console.log('button3 pressed');
                       led.toggle(6);
@@ -68,7 +64,7 @@ board.on("ready", function()
               socket.on
                 (
                   
-                  'click', function () 
+                  'click4', function () 
                     {
                       console.log('button4 pressed');
                       led.toggle(9);
@@ -79,7 +75,7 @@ board.on("ready", function()
               socket.on
                 (
                   
-                  'click', function () 
+                  'click5', function () 
                     {
                       
                       console.log('button5 pressed');
@@ -92,7 +88,7 @@ board.on("ready", function()
               socket.on
                 (
                   
-                  'click', function () 
+                  'click6', function () 
                     {
             
                       console.log('button6 pressed');
